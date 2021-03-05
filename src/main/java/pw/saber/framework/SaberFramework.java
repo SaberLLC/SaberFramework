@@ -34,12 +34,13 @@ public class SaberFramework extends JavaPlugin {
         logger = this.getLogger();
         registerListeners();
         persist = new Persist();
+        Config.load();
     }
 
     public void onDisable() {
         instance = null;
-
         SaberGUI.activeGUIs.values().forEach(SaberGUI::close);
+        Config.save();
     }
 
     public Persist getPersist() {
