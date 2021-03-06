@@ -33,6 +33,7 @@ public class SaberFramework extends JavaPlugin {
         instance = this;
         logger = this.getLogger();
         registerListeners();
+        getDataFolder().mkdirs();
         persist = new Persist();
         Config.load();
     }
