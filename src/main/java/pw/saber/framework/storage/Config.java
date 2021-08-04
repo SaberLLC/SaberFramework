@@ -8,10 +8,10 @@ public class Config {
     private static transient Config i = new Config();
 
     public static void load() {
-        SaberFramework.getInstance().getPersist().loadOrSaveDefault(i, Config.class, "config");
+        SaberFramework.getInstance().getPersist().loadOrSaveDefault(i, Config.class, "framework_config");
     }
 
     public static void save() {
-        SaberFramework.getInstance().getPersist().save(i, "config");
+        SaberFramework.getInstance().getPersist().save(i, "framework_config");
     }
 }
